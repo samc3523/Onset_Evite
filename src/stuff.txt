@@ -1,3 +1,0 @@
-"crockfords22@icloud.com"
-
-  git config --global user.name "Samuel Crockford"
