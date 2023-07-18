@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      guests: []
     }
   }
 
@@ -19,7 +19,7 @@ class App extends Component {
   
 
   render() {
-    const { posts } = this.state;
+    const { guests } = this.state;
     return (
       <div className="container">
         <div class="jumbotron">
