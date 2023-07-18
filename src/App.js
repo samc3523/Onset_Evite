@@ -14,7 +14,7 @@ class App extends Component {
     const url = "https://onsetvback.onrender.com/guests";
     fetch(url)
     .then(response => response.json())
-    .then(json => this.setState({ posts: json }))
+    .then(json => this.setState({ guests: json }))
   }
   
 
@@ -34,13 +34,13 @@ class App extends Component {
         <div className="jumbotron">
           Whos Going ?
         </div>
-        {posts.map((post) => (
-          <div className="card" key={post.id}>
+        {guests.map((guest) => (
+          <div className="card" key={guest.id}>
             <div className="card-header">
-              #{post.id} {post.title}
+              {post.gname}
             </div>
             <div className="card-body">
-              <p className="card-text">{post.body}</p>
+              <p className="card-text">{guest.msg}</p>
             </div>
           </div>
         ))}
