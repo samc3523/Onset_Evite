@@ -37,7 +37,7 @@ class App extends Component {
         {guests.map((guest) => (
           <div className="card" key={guest.id}>
             <div className="card-header">
-              {post.gname}
+              {guest.gname}
             </div>
             <div className="card-body">
               <p className="card-text">{guest.msg}</p>
