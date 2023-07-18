@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = "https://jsonplaceholder.typicode.com/posts";
+    const url = "https://onsetvback.onrender.com/guests";
     fetch(url)
     .then(response => response.json())
     .then(json => this.setState({ posts: json }))
