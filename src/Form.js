@@ -1,6 +1,6 @@
 import useForm from "./UseForm";
 
-const FORM_ENDPOINT = "https://herotofu.com/start"; // TODO - update to the correct endpoint
+const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests"; 
 
 const Form = () => {
   const additionalData = {
@@ -39,7 +39,7 @@ const Form = () => {
         <input
           type="text"
           placeholder="Your name"
-          name="name"
+          name="gname"
           className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
           required
         />
@@ -54,9 +54,18 @@ const Form = () => {
         />
       </div>
       <div className="mb-3 pt-0">
+        <input
+          type="phone"
+          placeholder="phone"
+          name="phone"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="mb-3 pt-0">
         <textarea
           placeholder="Your message"
-          name="message"
+          name="msg"
           className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
           required
         />
