@@ -3,7 +3,13 @@ import useForm from "./UseForm";
 const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests"; 
 
 const Form = () => {
-  const { handleSubmit, status, message } = useForm();
+  const additionalData = {
+    coming: true,
+  };
+
+  const { handleSubmit, status, message } = useForm({
+    additionalData,
+  });
 
   if (status === "success") {
     return (
