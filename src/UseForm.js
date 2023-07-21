@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function useForm(additionalData) {
+function useForm() {
   const [status, setStatus] = useState('');
   const [message, setMessage] = useState('');
 
@@ -14,12 +14,8 @@ function useForm(additionalData) {
       .filter((input) => input.name)
       .reduce((obj, input) => Object.assign(obj, { [input.name]: input.value }), {});
 
-      if (additionalData) {
-        Object.assign(data, additionalData);
-      }
-    
-    
-    
+
+
       fetch(finalFormEndpoint, {
       method: 'POST',
       headers: {
