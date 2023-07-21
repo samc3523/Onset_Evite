@@ -36,7 +36,7 @@ function useForm() {
         setStatus('error');
       });
   };
-  window.location.reload(true);
+  
   return { handleSubmit, status, message };
 }
 
