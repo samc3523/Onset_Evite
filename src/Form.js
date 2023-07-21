@@ -2,6 +2,11 @@ import useForm from "./UseForm";
 
 const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests/"; 
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
+
 const Form = () => {
 
 
@@ -71,6 +76,7 @@ const Form = () => {
           <button
             className="btn btn-dark"
             type="submit"
+            onClick={refreshPage}
           >
             RSVP
           </button>
