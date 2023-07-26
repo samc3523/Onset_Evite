@@ -82,7 +82,6 @@ const Form = () => {
           <button
             className="btn btn-dark"
             type="submit"
-            onClick={refreshPage}
           >
             RSVP
           </button>
