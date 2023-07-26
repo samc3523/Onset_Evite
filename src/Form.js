@@ -1,4 +1,5 @@
 import useForm from "./UseForm";
+import ButtonCalDir from './ButtonCalDir';
 
 const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests/"; 
 
@@ -15,8 +16,14 @@ const Form = () => {
   if (status === "success") {
     return (
       <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">{message}</div>
+      <div class="jumbotron"> 
+        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Mmw2bTFnZGZsZ2Y3ZDBjMzJidmoxNmo3Y2Qgc2FteWNyb2NrQG0&tmsrc=samycrock%40gmail.com">
+          <button className="btn btn-light">Add to Calendar</button>
+        </a>
+        <a href="https://goo.gl/maps/SXhMiduoAJne9mgE8">
+            <button className="btn btn-light">Get Directions</button>
+        </a>
+      </div>
       </>
     );
   }
