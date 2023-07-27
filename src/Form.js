@@ -1,8 +1,6 @@
 import useForm from "./UseForm";
 const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests/"; 
-
-
-
+import Box from "./CalMap";
 
 const Form = () => {
 
@@ -77,6 +75,7 @@ const Form = () => {
           >
             RSVP
           </button>
+          {isShown && <Box />}
         </div>
       )}
     </form>
