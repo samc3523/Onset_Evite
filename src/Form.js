@@ -1,11 +1,16 @@
 import useForm from "./UseForm";
-
 const FORM_ENDPOINT = "https://onsetvback.onrender.com/guests/"; 
 
-function refreshPage() {
-  window.location.reload(false);
-}
 
+const [isShown, setIsShown] = useState(false);
+
+const handleClick = event => {
+  // 👇️ toggle shown state
+  setIsShown(current => !current);
+
+  // 👇️ or simply set it to true
+  // setIsShown(true);
+};
 
 const Form = () => {
 
@@ -15,14 +20,8 @@ const Form = () => {
   if (status === "success") {
     return (
       <>
-      <div class="jumbotron"> 
-        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Mmw2bTFnZGZsZ2Y3ZDBjMzJidmoxNmo3Y2Qgc2FteWNyb2NrQG0&tmsrc=samycrock%40gmail.com">
-          <button className="btn btn-light">Add to Calendar</button>
-        </a>
-        <a href="https://goo.gl/maps/SXhMiduoAJne9mgE8">
-            <button className="btn btn-light">Get Directions</button>
-        </a>
-      </div>
+        <div className="text-2xl">Thank you!</div>
+        <div className="text-md">{message}</div>
       </>
     );
   }
@@ -82,6 +81,7 @@ const Form = () => {
           <button
             className="btn btn-dark"
             type="submit"
+            onClick={handleClick}
           >
             RSVP
           </button>
