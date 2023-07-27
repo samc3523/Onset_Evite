@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import "./App.css";
 import Form from "./Form";
+import Box from "./CalMap.js";
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      guests: []
+      guests: [],
+      isSubmitted: false,
     }
+  }
+
+  onSubmit(e) {
+    // Do something
+    this.setState({isSubmitted: true})
   }
 
   componentDidMount() {
@@ -31,6 +38,7 @@ class App extends Component {
             <div className="py-6">
               <Form />
             </div>
+            {this.state.isSubmitted && <Box/>}
         </div>
         <div className="jumbotron">
           Whos Going ?
