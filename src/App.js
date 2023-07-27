@@ -9,8 +9,21 @@ class App extends Component {
     this.state = {
       guests: []
     }
+  
+  
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle shown state
+    setIsShown(current => !current);
+
+    // 👇️ or simply set it to true
+    // setIsShown(true);
+  
+  }
   }
 
+  
   componentDidMount() {
     const url = "https://onsetvback.onrender.com/guests";
     fetch(url)
